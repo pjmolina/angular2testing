@@ -1,6 +1,6 @@
 # angular2-webpack
 
-[![Build Status](https://travis-ci.org/pjmolina/webinar-angular2testing.svg?branch=master)](https://travis-ci.org/pjmolina/webinar-angular2testing)
+[![Build Status](https://travis-ci.org/Foxandxss/webinar-angular2testing.svg?branch=master)](https://travis-ci.org/Foxandxss/webinar-angular2testing)
 
 [![Dependency Status](https://david-dm.org/preboot/angular2-webpack/status.svg)](https://david-dm.org/preboot/angular2-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angular2-webpack/dev-status.svg)](https://david-dm.org/preboot/angular2-webpack#info=devDependencies)
 [![Join the chat at https://gitter.im/preboot/angular2-webpack](https://badges.gitter.im/preboot/angular2-webpack.svg)](https://gitter.im/preboot/angular2-webpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
