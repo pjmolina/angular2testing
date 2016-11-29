@@ -8,8 +8,8 @@ import { Show } from './show';
 export class ShowService {
   constructor(private http: Http) { }
 
-  getShow(id: number): Observable<Show> {
+  getShows(): Observable<Show[]> {
     return this.http.get('api/shows')
-      .map((res) => res.json());
+      .map((res) => res.json().data);
   }
 }

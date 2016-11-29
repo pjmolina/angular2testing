@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
-import { routing } from './app.routing';
+import { ShowListComponent, ShowDetailsComponent, RatingPipe } from './show';
+import { AppRoutingModule } from './app-routing.module';
 import { ShowService, InMemoryDataService } from './shared';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
@@ -15,11 +16,14 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     BrowserModule,
     HttpModule,
     FormsModule,
-    routing,
+    AppRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowListComponent,
+    ShowDetailsComponent,
+    RatingPipe
   ],
   providers: [
     ShowService
