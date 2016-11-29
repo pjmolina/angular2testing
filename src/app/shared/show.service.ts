@@ -8,6 +8,11 @@ import { Show } from './show';
 export class ShowService {
   constructor(private http: Http) { }
 
+  getShow(id: number): Observable<Show> {
+    return this.http.get(`api/shows/${id}`)
+      .map((res) => res.json().data);
+  }
+
   getShows(): Observable<Show[]> {
     return this.http.get('api/shows')
       .map((res) => res.json().data);

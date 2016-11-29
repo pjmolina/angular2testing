@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ShowListComponent } from './show';
+import { ShowListComponent, ShowDetailsComponent } from './show';
 
 const routes: Routes = [
   { path: '', redirectTo: '/shows', pathMatch: 'full' },
-  { path: 'shows', component: ShowListComponent }
+  { path: 'shows', component: ShowListComponent },
+  { path: 'shows/:id', component: ShowDetailsComponent }
 ];
 
 @NgModule({

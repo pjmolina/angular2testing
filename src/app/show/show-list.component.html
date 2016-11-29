@@ -1,1 +1,3 @@
-<show-details *ngFor="let show of shows" [name]="show.name" [cover]="show.cover" [rating]="show.rating"></show-details>
+<h2>List of all shows</h2>
+
+<img class="cover" *ngFor="let show of shows" [src]="show.cover">
