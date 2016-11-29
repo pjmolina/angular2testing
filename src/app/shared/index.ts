@@ -1,1 +1,3 @@
-export * from './api.service';
+export * from './show.service';
+export * from './show';
+export * from './in-memory-data.service';
