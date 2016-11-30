@@ -5,7 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
-import { ShowListComponent, ShowDetailsComponent, RatingPipe } from './show';
+import {
+  ShowListComponent,
+  ShowDetailsComponent,
+  ShowCoverComponent,
+  RatingPipe
+} from './show';
 import { AppRoutingModule } from './app-routing.module';
 import { ShowService, InMemoryDataService } from './shared';
 
@@ -23,6 +28,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AppComponent,
     ShowListComponent,
     ShowDetailsComponent,
+    ShowCoverComponent,
     RatingPipe
   ],
   providers: [
