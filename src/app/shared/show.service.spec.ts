@@ -71,7 +71,6 @@ describe('ShowService', () => {
     });
 
     showService.getShow(1).subscribe((show) => {
-      console.log(show);
       expect(show.name).toBe('Barrio Sésamo');
     });
   });
