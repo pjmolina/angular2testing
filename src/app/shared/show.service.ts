@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 
 import { Show } from './show';
 
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class ShowService {
   constructor(private http: Http) { }
