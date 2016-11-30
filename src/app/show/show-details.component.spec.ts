@@ -1,4 +1,4 @@
-import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { By } from '@angular/platform-browser';
 
@@ -10,6 +10,8 @@ import { ActivatedRouteMock, RouterStub, showServiceStub } from '../../testing/m
 describe('ShowDetailsComponent', () => {
   let fixture: ComponentFixture<ShowDetailsComponent>;
   let instance: ShowDetailsComponent;
+  let router: Router;
+  let showService: ShowService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -26,19 +28,22 @@ describe('ShowDetailsComponent', () => {
 
     fixture = TestBed.createComponent(ShowDetailsComponent);
     instance = fixture.componentInstance;
+
+    router = fixture.debugElement.injector.get(Router);
+    showService = fixture.debugElement.injector.get(ShowService);
   });
 
-  it('ask for the show of id 0', inject([ShowService], (showService: ShowService) => {
+  it('ask for the show of id 0', () => {
     spyOn(showService, 'getShow').and.callThrough();
     instance.ngOnInit();
     expect(showService.getShow).toHaveBeenCalledWith(0);
-  }));
+  });
 
-  it('goes to show list with goBack()', inject([Router], (router: Router) => {
+  it('goes to show list with goBack()', () => {
     spyOn(router, 'navigate');
     instance.goBack();
     expect(router.navigate).toHaveBeenCalledWith(['shows']);
-  }));
+  });
 
   it('goes to show list by clicking the button', () => {
     spyOn(instance, 'goBack');

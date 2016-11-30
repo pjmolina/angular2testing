@@ -20,8 +20,8 @@ describe('ShowService', () => {
         ShowService,
         {
           provide: Http,
-          useFactory: (mockBackend, options) => {
-            return new Http(mockBackend, options);
+          useFactory: (backend, options) => {
+            return new Http(backend, options);
           },
           deps: [MockBackend, BaseRequestOptions]
         },
@@ -40,13 +40,13 @@ describe('ShowService', () => {
         { id: 0, name: 'Heidi', cover: 'casiperono', rating: 1 },
         { id: 1, name: 'Pokemon', cover: 'pikachu.com', rating: 3 },
         { id: 2, name: 'Power Rangers', cover: 'amarillopowa', rating: 2 },
-        { id: 3, name: 'Campeones', cover: 'campoinfinito', rating: 1 },
+        { id: 3, name: 'Campeones', cover: 'campoinfinito', rating: 1 }
       ]
     };
 
     fakeShow = {
       data: { id: 1, name: 'Barrio Sésamo', cover: 'galletas', rating: 3 }
-    }
+    };
   })));
 
   it('gets the list of shows', () => {
