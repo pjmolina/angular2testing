@@ -1,8 +1,13 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Bree+Serif');
+
 // styles in src/style directory are applied to the whole page
 body {
     background: #0147A7;
     color: #fff;
+    margin: 4em 4em;
+    font-family: 'Bree Serif';
 }
 a {
     color: #03A9F4;
@@ -11,4 +16,48 @@ a {
 .cover {
   width: 200px;
   height: 200px;
+}
+
+h1 {
+    font-family: 'Fugaz One';    
+    font-size: 50px;
+}
+h2 {
+    font-family: 'Fugaz One';  
+    font-size: 36px;  
+    color: #ceceff;
+}
+h3 {
+    margin-top: 30px;
+    margin-bottom: -30px;
+    font-family: 'Fugaz One';  
+    font-size: 24px;  
+    color: #aaccff;
+}
+.cover {
+    margin-top: 40px;
+    margin-right: 36px;
+    position: relative;
+    left: 0px;
+    animation: enter-image 1s ease-in-out;
+}
+
+@keyframes enter-image {
+    0%   {left: 2000px;}
+    100% {left: 0px;}
+}
+
+.cover:hover {
+    border: 8px solid #ff8800; 
+}
+
+button {
+    background: #fff;
+    border: 3px solid #ccc;
+    border-radius: 14px;
+    padding: 0.5em 3em;
+}
+button:hover {
+    background: #bbf;
+    border: 3px solid #888;
 }
