@@ -1,3 +1,4 @@
+import { Directive, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export let showServiceStub = {
@@ -12,4 +13,19 @@ export class ActivatedRouteMock {
 
 export class RouterStub {
   navigate(commands: any[]) {}
+}
+
+@Directive({
+  selector: '[routerLink]',
+  host: {
+    '(click)': 'onClick()'
+  }
+})
+export class RouterLinkStubDirective {
+  @Input('routerLink') linkParams: any;
+  navigatedTo: any = null;
+
+  onClick() {
+    this.navigatedTo = this.linkParams;
+  }
 }
